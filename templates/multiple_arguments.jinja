@@ -1,0 +1,12 @@
+{% extends "main.jinja" %}
+
+{% block content %}
+
+{% set total = items | length %}
+{% for item in items %}
+    <div>
+        {{ (item, total) | render('multi_arg_item.jinja') }}
+    </div>
+{% endfor %}
+
+{% endblock %}
